@@ -26,6 +26,8 @@ public class test
         sc.close();
 
 
+        int [] arr = new int [10];
+        System.out.println(arr[10]);
 //
 //        double soTien, laiSuat = 0, tongTien;
 //        int thangGui, goiGui;

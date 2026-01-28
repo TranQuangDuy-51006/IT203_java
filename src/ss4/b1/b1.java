@@ -8,9 +8,7 @@ public class b1 {
         StringBuilder result = new StringBuilder();
 
         for (String word : words) {
-            result.append(Character.toUpperCase(word.charAt(0)))
-                    .append(word.substring(1).toLowerCase())
-                    .append(" ");
+            result.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1).toLowerCase()).append(" ");
         }
         return result.toString().trim();
     }

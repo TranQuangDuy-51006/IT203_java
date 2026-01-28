@@ -7,33 +7,26 @@ public class b3 {
     public static void main(String[] args) {
         String[] transactions = {"BK001-20/01", "BK005-21/01", "BK099-22/01"};
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String today = LocalDate.now().format(formatter);
-
         long startBuilder = System.currentTimeMillis();
-
-        StringBuilder sb = new StringBuilder();
-        sb.append("--- BÁO CÁO MƯỢN SÁCH ---\n");
+        StringBuilder reportBuilder = new StringBuilder();
+        reportBuilder.append("--- BÁO CÁO MƯỢN SÁCH ---\n");
+        reportBuilder.append("Ngày tạo: 24/01/2026\n");
         for (String t : transactions) {
-            sb.append("Giao dịch: ").append(t).append("\n");
+            reportBuilder.append("Giao dịch: ").append(t).append("\n");
         }
-
         long endBuilder = System.currentTimeMillis();
+
         long startString = System.currentTimeMillis();
-
-        String report = "--- BÁO CÁO MƯỢN SÁCH ---\n";
-
+        String reportString = "";
+        reportString += "--- BÁO CÁO MƯỢN SÁCH ---\n";
+        reportString += "Ngày tạo: 24/01/2026\n";
         for (String t : transactions) {
-            report += "Giao dịch: " + t + "\n";
+            reportString += "Giao dịch: " + t + "\n";
         }
-
         long endString = System.currentTimeMillis();
 
-        System.out.println(sb.toString());
-
-        System.out.println("Số thời gian thực thi đối với StringBuilder: "
-                + (endBuilder - startBuilder));
-        System.out.println("Số thời gian thực thi đối với String: "
-                + (endString - startString));
+        System.out.println(reportBuilder.toString());
+        System.out.println("Số thời gian thực thi đối với StringBuilder: " + (endBuilder - startBuilder));
+        System.out.println("Số thời gian thực thi đối với String: " + (endString - startString));
     }
 }

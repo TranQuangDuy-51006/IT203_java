@@ -2,69 +2,61 @@ package ss2;
 
 import java.util.Scanner;
 
-public class test
-{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n1, n2;
-        System.out.println("n1 =");
-        n1 = sc.nextInt();
-        System.out.println("n2 =");
-        n2 = sc.nextInt();
-        for(int i = n1; i < n2; i++){
-            boolean check = true;
-            for(int j = 2; j <= i/2; j++){
-                if(i % j == 0){
-                    check = false;
-                    break;
-                }
-            }
-            if (check && i > 1) {
-                System.out.println(i);
+public class test {
+
+    public static String reverse(String input) {
+        if (input == null || input.trim().isEmpty()) {
+            return "";
+        }
+        String[] words = input.trim().split("\\s+");
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = words.length - 1; i >= 0; i--) {
+            sb.append(words[i]);
+            if (i != 0) {
+                sb.append(" ");
             }
         }
-        sc.close();
 
-
-        int [] arr = new int [10];
-        System.out.println(arr[10]);
-//
-//        double soTien, laiSuat = 0, tongTien;
-//        int thangGui, goiGui;
-//        System.out.println("Nhap so tien: ");
-//        soTien = sc.nextDouble();
-//        System.out.println("Nhap thang gui: ");
-//        thangGui = sc.nextInt();
-//        System.out.println("Nhap goi: (thang)");
-//        goiGui = sc.nextInt();
-//        switch(goiGui){
-//            case 1:
-//                laiSuat = 0.04/12;
-//                break;
-//            case 2:
-//                laiSuat = 0.045/12;
-//                break;
-//            case 3:
-//                laiSuat = 0.05/12;
-//                break;
-//            case 4:
-//                laiSuat = 0.55/12;
-//                break;
-//            case 6:
-//                laiSuat = 0.6/12;
-//                break;
-//            case 9:
-//                laiSuat = 0.65/12;
-//                break;
-//            case 12:
-//                laiSuat = 0.07/12;
-//                break;
-//            default:
-//                System.out.println("Khong co goi gui nao nhu the, Mat Tien!!!!");
-//        }
-//        if(laiSuat > 0) {
-//            tongTien = laiSuat * soTien;
-//        }
-
+        return sb.toString();
     }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice = -1;
+        while (choice != 6) {
+            System.out.println("------MENU------");
+            System.out.println("1.Tim cap so co tong bang K ");
+            System.out.println("2.Don so 0 ve cuoi: ");
+            System.out.println("3.Kiem tra chuoi doi xung");
+            System.out.println("4.Dao nguoc tu trong cau");
+            System.out.println("5.So hanh phuc ");
+            System.out.println("6.Thoat chuong trinh");
+            System.out.printf("Lua chon cua ban: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    System.out.println("vc");
+                    break;
+                case 4:
+                    System.out.print("Nhập chuỗi: ");
+                    String input = sc.nextLine();
+                    String result = reverse(input);
+                    System.out.println(result);
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    System.out.println("Lua chon khong hop le!!");
+            }
+        }
+    }
+
 }

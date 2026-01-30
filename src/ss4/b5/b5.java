@@ -7,7 +7,7 @@ public class b5 {
             int borrow = 0;
             int ret = 0;
             for(int i = 0; i < logs.length; i++) {
-                String[] parts = logs[i].split(" \\| ");
+                String[] parts = logs[i].split(" //| ");
 
                 String date = parts[0];
 

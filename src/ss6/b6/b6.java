@@ -60,6 +60,7 @@ public class b6 {
         User u1 = new User(1, "jiren1", "123456", "jiren1@gmail.com");
         User u2 = new User(2, "jiren2", "", "jiren2@gmail.com");
         User u3 = new User(3, "jiren3", "abcdef", "jiren3gmail.com");
+        User u4 = new User(3, "jiren3", "abcdef", "jiren3gmail.com");
 
         System.out.println("Thong tin user u1:");
         u1.hienThiThongTin();
@@ -70,7 +71,7 @@ public class b6 {
 
         System.out.println("Thu cap nhat password và email cho u3:");
         u3.setPassword("");
-        u3.setEmail("trangnn@gmail.com");
+        u3.setEmail("wtf@gmail.com");
         u3.hienThiThongTin();
     }
 }
